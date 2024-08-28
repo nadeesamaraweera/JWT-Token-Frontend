@@ -10,6 +10,7 @@ $(document).ready(function () {
             },
             success:function (response){
                 console.log(response)
+                $('<p>'+response+'</p>').appendTo('body')
 
             },
             error:function (error){
@@ -24,5 +25,6 @@ $(document).ready(function () {
 
 function logout(){
     localStorage.removeItem("token")
+    window.location.href="signIn.html"
 
 }
